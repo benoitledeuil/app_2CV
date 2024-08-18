@@ -1,2 +1,18 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.container{
+  background-color: red;
+  height: 100vh;
+}
+
+h1{
+  color: white;
+}
+
+#kilometers{
+  color: white;
+  background-color: black;
+  border-color: white;
+  border-radius: 4px;
+}

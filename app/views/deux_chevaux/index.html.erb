@@ -1,0 +1,30 @@
+<div class="container">
+
+  <h1>Bienvenue sur la jauge virtuelle de la 2CV de Pouques</h1>
+
+  <% if @deux_chevaux.kilometers > 200 %>
+    <p>IL FAUT FAIRE LE PLEIN</p>
+  <% end %>
+
+
+  <%= form_with url: update_path, method: :post do %>
+    <div>
+      <%= label_tag :kilometers, " Rentrer les kilomètres parcourus" %>
+      <div class="compteur">
+      <%= number_field_tag :kilometers %>
+      </div>
+    </div>
+    <div class = "save">
+      <%= submit_tag "Enregistrer", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+
+  <%= form_with url: reset_path, method: :post do %>
+    <div class = "reset">
+      <%= submit_tag "Faire le plein" %>
+    </div>
+  <% end %>
+
+  <p>Vous avez parcouru <%= @deux_chevaux.kilometers %> kilomètres depuis le dernier plein.</p>
+
+</div>
